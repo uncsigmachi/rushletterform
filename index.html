@@ -82,6 +82,9 @@
         min-width: 230px;
         width: 100%;
       }
+      input[type=text]:invalid, input[type=email]:invalid {
+        border-bottom-color: red;
+      }
       input[type=text] {
         max-width: 100%;
       }
@@ -116,6 +119,9 @@
           max-width: 550px;
           font-size: 50%;
         }
+        input[type=text]:focus::placeholder, input[type=email]:focus::placeholder {
+          transform: translate3d(0, -1.8em, 0);
+        }
       }
     </style>
       <div class="form-container">
@@ -133,9 +139,8 @@
           <input type="text" id="lastName" placeholder="Last Name" name="entry.1487702317" value="">
           <input type="email" id="studentEmail" placeholder="Your Email" name="entry.1489714218" value="">
           <input type="email" id="parentEmail" placeholder="Your Parent's Email" name="entry.1523094096" value="">
-
+          <input type="submit" style="" name="" value="SUBMIT">
         </form>
-        <input type="submit" style="" name="" value="SUBMIT">
       </div>
   </body>
 </html>
