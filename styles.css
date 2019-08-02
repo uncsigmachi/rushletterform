@@ -1,0 +1,116 @@
+* {
+        box-sizing: border-box;
+      }
+      body {
+        background-color: #f5f7f6;
+        font-size: 250%;
+        color: #333;
+        margin: 0;
+        overflow-x: hidden;
+        overflow-y: auto;
+        min-height: 100vh;
+        width: 100vw;
+      }
+      .form-container {
+        max-width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin: auto;
+        min-height: 100%;
+        padding-left: 25px;
+        padding-right: 25px;
+      }
+      .heading {
+        width: 100%;
+        padding: 15px;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .heading img {
+        max-height: 8em;
+      }
+      .heading h1 {
+        font-family: 'Cinzel', serif;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        text-shadow: none;
+        font-weight: normal;
+        -webkit-font-smoothing: antialiased;
+      }
+      .heading h2 {
+        font-family: 'Lato', sans-serif;
+        font-weight: normal;
+        -webkit-font-smoothing: antialiased;
+      }
+      form {
+        width: 100%;
+        padding: 15px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+      input {
+        font-size: 1.6em;
+        outline: none;
+        transition: all .3s;
+        font-family: 'Lato', sans-serif;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+      }
+      input[type=text], input[type=email] {
+        font-size: 1.8em;
+        padding: 5px;
+        padding-left: 8px;
+        margin: .5em 0px;
+        border: 1px solid lightgray;
+        border-bottom: 3px solid #63d481;
+        min-width: 230px;
+        width: 100%;
+      }
+      input[type=text]:invalid, input[type=email]:invalid {
+        border-bottom-color: red;
+      }
+      input[type=text] {
+        max-width: 100%;
+      }
+      input[type=text]::placeholder, input[type=email]::placeholder {
+        z-index: 2;
+        transition: all .3s;
+        opacity: .7;
+      }
+      input[type=text]:focus::placeholder, input[type=email]:focus::placeholder {
+        transform: translate3d(0, -1.8em, 0);
+        font-size: 50%;
+        opacity: 1;
+      }
+      input[type=submit] {
+        border: none;
+        min-width: 5em;
+        height: 2.5em;
+        cursor: pointer;
+        margin: 20px auto 20px auto;
+        background-color: #63d481;
+        font-weight: bold;
+        color: white;
+      }
+      input[type=submit]:hover {
+        opacity: .7;
+      }
+      @media all and (min-width: 1100px) {
+        input[type=text] {
+          max-width: 47%;
+        }
+        .form-container {
+          max-width: 550px;
+          font-size: 50%;
+        }
+        input[type=text]:focus::placeholder, input[type=email]:focus::placeholder {
+          transform: translate3d(0, -2.8em, 0);
+        }
+      }
