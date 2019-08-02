@@ -124,6 +124,7 @@
         }
       }
     </style>
+    <iframe style="display: none;" name="no-target" src="#" width="" height=""></iframe>
       <div class="form-container">
         <div class="heading">
           <div class="">
@@ -134,7 +135,7 @@
             <h2>Recruitment Welcome Form</h2>
           </div>
         </div>
-        <form action="https://docs.google.com/forms/d/e/1FAIpQLScHOqscPN6ik1ROvU2SC9Vdm9MxsVurOXSKZuQa6u767aOXAQ/formResponse" method="POST">
+        <form id="rushform" target="no-target" action="https://docs.google.com/forms/d/e/1FAIpQLScHOqscPN6ik1ROvU2SC9Vdm9MxsVurOXSKZuQa6u767aOXAQ/formResponse" method="POST">
           <input type="text" id="firstName" placeholder="First Name" name="entry.45010832" value="" required>
           <input type="text" id="lastName" placeholder="Last Name" name="entry.1487702317" value="" required>
           <input type="email" id="studentEmail" placeholder="Your Email" name="entry.1489714218" value="" required>
@@ -142,5 +143,10 @@
           <input type="submit" style="" name="" value="SUBMIT">
         </form>
       </div>
+    <script type="text/javascript">
+    document.getElementById("rushform").onsubmit = function () {
+      location.href = "./thanks.html";
+    };
+    </script>
   </body>
 </html>
